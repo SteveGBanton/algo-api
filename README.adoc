@@ -1,0 +1,24 @@
+# Go Algorithm API
+
+This repository is a collection of algorithms written in go, served through an API.
+
+## Building
+
+```bash
+$ go build
+$ ./algo-api
+```
+
+## Benchmarking
+
+Create a Benchmark file with the filename xxx_test.go, and function name BenchmarkXXXX in bench/.
+
+```
+$ go test -bench=BenchmarkXXXX -benchmem -cpuprofile profile.out
+$ go tool pprof profile.out
+(pprof) top
+```
+
+The -memprofile and -blockprofile flags can also be used in `go test` to generate memory allocation and blocking call profiles.
+
+## More documentation as algorithms added...
